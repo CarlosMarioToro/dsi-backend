@@ -1,0 +1,41 @@
+@api = http://localhost:4000
+GET {{api}}
+###
+POST {{api}}
+Content-Type:  application/json
+
+{
+    "cod_usuario": 30,
+    "log_usuario": "ZAPATA",
+    "pwd_usuario": "985835701",
+    "nom_usuario": "MARIO",
+    "ape_usuario": "ZAPATA",
+    "permiso": "A",
+    "permiso_nivel_medio": "A",
+    "permiso_nivel_alto": "A"
+}
+
+###
+GET {{api}}/15
+
+###
+DELETE {{api}}/30
+
+###
+GET {{api}}/count
+
+###
+PUT {{api}}/30
+Content-Type:  application/json
+
+{
+    "nom_usuario": "CARLOS MARIO"
+}
+
+###
+GET {{api}}/HECTOR
+# Content-Type:  application/json
+
+# {
+#     "nom_usuario": "CARLOS"
+# }
