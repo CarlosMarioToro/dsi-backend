@@ -3,6 +3,7 @@ import conectarDB from './config/db.js';
 import dotenv from 'dotenv';
 import usuariosRoutes from  './routes/usuarios.routes.js';
 import centroCostosRoutes from  './routes/centroCostos.routes.js';
+import ciudadesRoutes from  './routes/ciudades.routes.js';
 import cors from 'cors';
 import bodyParser from 'body-parser';
 
@@ -17,6 +18,7 @@ app.use(cors());
 
 app.use('/dsi', usuariosRoutes);
 app.use('/dsi/centro-costos', centroCostosRoutes);
+app.use('/dsi/ciudades', ciudadesRoutes);
 
 const PORT = process.env.PORT || 4000;
 
