@@ -2,7 +2,7 @@ import express from 'express'
 import conectarDB from './config/db.js';
 import dotenv from 'dotenv';
 import usuariosRoutes from  './routes/usuarios.routes.js';
-// import menuRoutes from  './routes/menu.routes.js';
+import centroCostosRoutes from  './routes/centroCostos.routes.js';
 import cors from 'cors';
 import bodyParser from 'body-parser';
 
@@ -16,7 +16,7 @@ conectarDB();
 app.use(cors());
 
 app.use('/dsi', usuariosRoutes);
-// app.use('/dsi', menuRoutes);
+app.use('/dsi/centro-costos', centroCostosRoutes);
 
 const PORT = process.env.PORT || 4000;
 
